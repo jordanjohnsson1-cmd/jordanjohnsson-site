@@ -65,7 +65,7 @@
   dots.addEventListener('pointerup',function(e){stop();if(ignoreClick)setTimeout(function(){ignoreClick=false},80);try{dots.releasePointerCapture(e.pointerId)}catch(_e){}});
   dots.addEventListener('pointercancel',stop);
   dots.addEventListener('lostpointercapture',stop);
-  strip.addEventListener('scroll',readIndex,{passive:true});
+  strip.addEventListener('scroll',function(){requestAnimationFrame(readIndex)},{passive:true});
   window.addEventListener('resize',readIndex);
   render();
 })();
