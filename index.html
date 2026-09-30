@@ -58,6 +58,9 @@
 #music .grid>div:last-child{height:auto;align-self:start}#music .grid>div:last-child article{height:auto}
 
 .hero-overlay>div:first-child p{position:relative}html:not(.hero-type-ready):not(.hero-type-done) .hero-overlay>div:first-child p{visibility:hidden}.hero-type-ghost{visibility:hidden;display:block}.hero-type-copy{position:absolute;inset:0;display:block;font:inherit;letter-spacing:inherit;text-transform:inherit;line-height:inherit;margin:0}.hero-typing .hero-type-copy:after{content:'';display:inline-block;width:1px;height:.8em;background:currentColor;margin-left:2px;animation:hero-type-blink .7s step-end infinite}@keyframes hero-type-blink{50%{opacity:0}}
+
+/* Piano: copy beside the smaller photo, keyboard underneath. */
+#music .grid>div:first-child{height:auto;align-self:start}#music .grid>div:first-child article{height:auto;display:grid;grid-template-columns:minmax(0,1fr) 150px;column-gap:18px;align-content:start}#music .grid>div:first-child article>span,#music .grid>div:first-child article>h3,#music .grid>div:first-child article>p{grid-column:1}#music .grid>div:first-child article>img{grid-column:2;grid-row:1/4;width:150px;height:200px;max-width:none;aspect-ratio:3/4;margin:0;border-radius:18px;align-self:start}#music .grid>div:first-child .pianowrap{grid-column:1/-1;grid-row:4;margin-top:22px}#music .grid>div:first-child article>p{font-size:15px;line-height:1.65}@media(max-width:639px){#music .grid>div:first-child article{grid-template-columns:minmax(0,1fr) 104px;column-gap:12px}#music .grid>div:first-child article>img{width:104px;height:139px;border-radius:14px}#music .grid>div:first-child article>h3{font-size:19px}#music .grid>div:first-child article>p{font-size:14px;line-height:1.6}}
 </style><script>(function(){
 var key='jordan-hero-typewriter-v2',seen=false,prepared=false,started=false,target,nodes=[],original=[];
 try{seen=sessionStorage.getItem(key)==='played'}catch(e){}
