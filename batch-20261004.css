@@ -1,0 +1,55 @@
+/* batch-20261004: site edit pass */
+html{scrollbar-width:none;-ms-overflow-style:none}html::-webkit-scrollbar,body::-webkit-scrollbar{display:none;width:0;height:0}
+html,body{overflow-x:hidden;max-width:100%}img,svg,video{max-width:100%}
+/* headline: static gray, no animated color roll */
+.hero-heading{animation:none!important;background:linear-gradient(180deg,#646973,#bbccd7)!important;background-size:100% 100%!important;background-position:0 0!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important}
+/* tagline: shown immediately, bigger */
+html .hero-overlay>div:first-child p{visibility:visible!important}
+.hero-type-copy{display:none!important}.hero-type-ghost{visibility:visible!important}
+.hero-overlay>div:first-child p.max-w-\[165px\]{max-width:min(340px,46vw)!important;font-size:clamp(.9rem,1.7vw,1.6rem)!important;line-height:1.35!important;font-weight:400!important}
+/* About me: all text visible at once, plain white */
+#about p span[style],#about p span{opacity:1!important;color:#fff!important}
+#about p .invisible{visibility:hidden!important}
+#about{min-height:0!important}
+#about>.relative{gap:1.5rem!important;padding-top:3rem!important;padding-bottom:3rem!important}
+/* tighter spacing */
+main>section:not(.marquee),main>footer{padding-top:3rem!important;padding-bottom:3rem!important}
+@media(min-width:768px){main>section:not(.marquee){padding-top:4rem!important;padding-bottom:4rem!important}}
+.marquee{padding-top:2rem!important;padding-bottom:1.5rem!important}
+section h2.hero-heading{margin-bottom:1rem!important}
+/* readable text */
+main section:not(#values) [class*="text-[#D7E2EA]/"],main section:not(#values) [class*="text-white/"]{color:#D7E2EA!important}
+main .text-xs{font-size:.8rem!important}main .text-sm{font-size:.95rem!important}
+main section:not(#values) p{color:#D7E2EA}
+/* Intuition AI card as a prominent button */
+.ia-card{cursor:pointer}
+.ia-card a[href*="intuition-ai"]{background:#fff!important;color:#0C0C0C!important;border-color:#fff!important;font-weight:700!important;font-size:1rem!important;padding:.7rem 1.3rem!important;box-shadow:0 0 0 0 rgba(255,255,255,.5);animation:ia-pulse 2.4s ease-out infinite}
+@keyframes ia-pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.45)}70%{box-shadow:0 0 0 14px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+a.gsp-link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a.gsp-link:hover{opacity:.8}
+/* friends' words */
+#friends{padding:3rem 1.25rem;color:#D7E2EA}
+#friends .fw-wrap{max-width:1350px;margin:0 auto}
+#friends h2{font-size:clamp(2.2rem,7vw,90px);font-weight:900;text-transform:uppercase;line-height:1;margin:0 0 .6rem}
+#friends .fw-sub{font-weight:300;font-size:clamp(1rem,1.6vw,1.2rem);margin:0 0 1.5rem;max-width:700px}
+#friends .fw-grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}@media(min-width:900px){#friends .fw-grid{grid-template-columns:repeat(4,1fr)}}
+#friends .fw-card{border:1px solid rgba(215,226,234,.3);border-radius:22px;padding:14px 16px;background:rgba(255,255,255,.04)}
+#friends .fw-name{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:#BBCCD7;margin-bottom:6px}
+#friends .fw-words{font-size:1.1rem;font-weight:500;line-height:1.35;margin:0}
+/* project cards: no tall sticky stacks */
+#stem div.relative[class*="h-[85vh]"]{height:auto!important;min-height:0!important;margin-bottom:1.25rem!important}
+#stem div.relative[class*="h-[85vh]"]>article{position:relative!important;top:auto!important;height:auto!important;min-height:0!important}
+#stem div.relative[class*="h-[85vh]"]>article>img{flex:none!important;max-height:420px;object-fit:contain}
+#stem .mt-20{margin-top:2rem!important}
+#press .mt-20,#people .mt-20{margin-top:2rem!important}
+@media(max-width:639px){
+main>section:not(.marquee){padding-top:2rem!important;padding-bottom:2rem!important}
+.marquee{padding-top:1rem!important;padding-bottom:.5rem!important}
+main section .mb-12,main section .mb-16,main section .mb-10{margin-bottom:1.1rem!important}
+main section .gap-12,main section .gap-10,main section .gap-8{gap:1rem!important}
+#press .grid,#track .grid,#sports .grid,#people .grid{gap:.7rem!important}
+main article[class*="p-"]{padding:1rem!important}
+#values [class*="py-"]{padding-top:1rem!important;padding-bottom:1rem!important}
+#about>.relative{padding-top:1.5rem!important;padding-bottom:1.5rem!important}
+#press .mt-20,#people .mt-20,#press .mt-16,#people .mt-16{margin-top:1.2rem!important}
+}
