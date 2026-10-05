@@ -53,3 +53,14 @@ main article[class*="p-"]{padding:1rem!important}
 #about>.relative{padding-top:1.5rem!important;padding-bottom:1.5rem!important}
 #press .mt-20,#people .mt-20,#press .mt-16,#people .mt-16{margin-top:1.2rem!important}
 }
+
+/* influencers: compact carousels */
+.family-carousel{margin-bottom:12px!important}
+.family-label{margin-bottom:6px!important}
+.family-card img{height:110px!important;margin:0 0 8px!important}
+.family-card p{margin-top:8px!important;flex:none!important}
+.family-card a{margin-top:12px!important}
+.family-card h3{margin-top:6px!important}
+@media(min-width:640px){.family-card{width:460px!important;margin-left:-230px!important;padding:22px 26px!important}}
+@media(max-width:639px){.family-card{width:322px!important;margin-left:-161px!important;padding:18px!important}}
+#people .family-stage{touch-action:pan-y}
